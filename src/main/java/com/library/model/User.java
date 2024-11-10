@@ -9,16 +9,13 @@ public class User {
 
     private char[] password;
 
-    private String name;
-
     private String role;
 
     private List<Book> borrowedBooks;
 
-    public User(String userName, char[] password, String name, String role) {
+    public User(String userName, char[] password,  String role) {
         this.userName = userName;
         this.password = password;
-        this.name = name;
         this.role = role;
         this.borrowedBooks = new ArrayList<>();
     }
@@ -37,14 +34,6 @@ public class User {
 
     public void setPassword(char[] password) {
         this.password = password;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getRole() {

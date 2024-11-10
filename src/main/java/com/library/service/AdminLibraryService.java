@@ -19,8 +19,10 @@ public class AdminLibraryService extends LibraryService {
         if(optionalBook.isPresent()) {
             Book existingBook = optionalBook.get();
             existingBook.getBookInventory().updateInventory(book.getBookInventory().getInventoryCount());
+            System.out.println("Book "+ existingBook.getTitle() + " by "+ existingBook.getAuthor()+ " added successfully," + " inventory: "+existingBook.getBookInventory().getInventoryCount());
         } else {
             Library.books.add(book);
+            System.out.println("Book "+ book.getTitle() + " by "+ book.getAuthor()+ " added successfully," + " inventory: "+book.getBookInventory().getInventoryCount());
         }
 
 

@@ -10,20 +10,27 @@ public class UserService {
 
     private List<User> userList;
 
+    private User loggedInUser;
+
     public UserService() {
         this.userList = new ArrayList<>();
     }
 
-    public void addUser(User user) {
+    public void registerUser(User user) {
         userList.add(user);
     }
 
     public Optional<User> login(String userName, char[] password) {
         for(User user : userList) {
             if(user.getUserName().equalsIgnoreCase(userName) && new String(user.getPassword()).equals(new String(password))) {
-              return Optional.of(user);
+                loggedInUser = user;
+                return Optional.of(user);
             }
         }
         return Optional.empty();
+    }
+
+    public User getLoggedInUser() {
+        return loggedInUser;
     }
 }
