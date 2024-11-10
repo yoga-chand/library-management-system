@@ -20,7 +20,9 @@ public class UserService {
 
     public Optional<User> login(String userName, char[] password) {
         for(User user : userList) {
-
+            if(user.getUserName().equalsIgnoreCase(userName) && new String(user.getPassword()).equals(new String(password))) {
+              return Optional.of(user);
+            }
         }
         return Optional.empty();
     }

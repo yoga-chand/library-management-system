@@ -1,12 +1,10 @@
 package com.library.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Library {
 
-    private List<Book> books;
+    public static List<Book> books = new ArrayList<>();
 
-    public Library(List<Book> books) {
-        this.books = books;
-    }
 }
