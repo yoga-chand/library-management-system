@@ -27,10 +27,6 @@ public class BookInventory {
         this.inventoryCount += count;
     }
 
-    public boolean isAvailable() {
-        return inventoryCount > borrowedCount;
-    }
-
     public int getInventoryCount() {
         return inventoryCount;
     }

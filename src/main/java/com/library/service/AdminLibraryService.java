@@ -24,8 +24,6 @@ public class AdminLibraryService extends LibraryService {
             Library.books.add(book);
             System.out.println("Book "+ book.getTitle() + " by "+ book.getAuthor()+ " added successfully," + " inventory: "+book.getBookInventory().getInventoryCount());
         }
-
-
     }
 
     @Override
@@ -40,7 +38,6 @@ public class AdminLibraryService extends LibraryService {
                 System.out.println("Book \"" + book.getTitle() + "\" by " + book.getAuthor() + " deleted successfully.");
             }
         }
-
     }
 
     @Override

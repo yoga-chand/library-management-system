@@ -27,7 +27,6 @@ public class MemberLibraryService extends LibraryService {
         if(book.getBookInventory().hasEnoughCopiesToBorrow()) {
             book.getBookInventory().setBorrowedCount(book.getBookInventory().getBorrowedCount() + 1);
             user.getBorrowedBooks().add(book);
-
         }
     }
 }

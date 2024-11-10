@@ -1,11 +1,8 @@
 package com.library.service;
 
 import com.library.model.Book;
-import com.library.model.Library;
 import com.library.model.User;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 import static com.library.model.Library.books;
