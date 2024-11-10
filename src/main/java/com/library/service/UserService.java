@@ -33,4 +33,8 @@ public class UserService {
     public User getLoggedInUser() {
         return loggedInUser;
     }
+
+    public List<User> getUserList() {
+        return userList;
+    }
 }
